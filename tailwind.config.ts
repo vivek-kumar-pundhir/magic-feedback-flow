@@ -61,7 +61,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				good: {
+					DEFAULT: 'hsl(var(--good))',
+					foreground: 'hsl(var(--good-foreground))'
+				},
+				bad: {
+					DEFAULT: 'hsl(var(--bad))',
+					foreground: 'hsl(var(--bad-foreground))'
+				},
+				worst: {
+					DEFAULT: 'hsl(var(--worst))',
+					foreground: 'hsl(var(--worst-foreground))'
 				}
+			},
+			backgroundImage: {
+				'gradient-bg': 'var(--gradient-bg)',
+				'gradient-good': 'var(--gradient-good)',
+				'gradient-bad': 'var(--gradient-bad)',
+				'gradient-worst': 'var(--gradient-worst)'
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'hover': 'var(--shadow-hover)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

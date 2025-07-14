@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 240 10% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -35,6 +35,25 @@ All colors MUST be HSL.
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
+
+    /* Review system colors */
+    --good: 142 76% 36%;
+    --good-foreground: 0 0% 100%;
+    --bad: 45 93% 47%;
+    --bad-foreground: 0 0% 100%;
+    --worst: 0 84% 60%;
+    --worst-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-bg: linear-gradient(135deg, hsl(240 10% 98%), hsl(250 15% 95%));
+    --gradient-good: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 42%));
+    --gradient-bad: linear-gradient(135deg, hsl(45 93% 47%), hsl(45 93% 53%));
+    --gradient-worst: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 66%));
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-soft: 0 4px 20px -2px hsl(var(--foreground) / 0.1);
+    --shadow-hover: 0 8px 30px -4px hsl(var(--foreground) / 0.15);
 
     --radius: 0.5rem;
 
