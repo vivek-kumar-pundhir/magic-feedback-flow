@@ -8,11 +8,11 @@ const MagicQRReview = () => {
   const [selectedFeedback, setSelectedFeedback] = useState<string>('');
   const { toast } = useToast();
 
-  // Replace with your actual Google Review link
-  const googleReviewLink = "[replace_with_your_google_review_link]";
+  // Replace with your hospital's Google Review link
+  const googleReviewLink = "[replace_with_your_hospital_google_review_link]";
   
-  // Replace with your actual webhook URL
-  const webhookUrl = "[replace_with_your_webhook_URL]";
+  // Replace with your hospital's webhook URL
+  const webhookUrl = "[replace_with_your_hospital_webhook_URL]";
 
   const handleGoodClick = () => {
     // Redirect to Google Reviews
@@ -31,11 +31,11 @@ const MagicQRReview = () => {
           'Content-Type': 'application/json',
         },
         mode: 'no-cors',
-        body: JSON.stringify({
-          feedback,
-          timestamp: new Date().toISOString(),
-          source: 'magic_qr_review'
-        }),
+          body: JSON.stringify({
+            feedback,
+            timestamp: new Date().toISOString(),
+            source: 'hospital_patient_feedback'
+          }),
       });
     } catch (error) {
       console.error('Error sending feedback:', error);
@@ -61,7 +61,7 @@ const MagicQRReview = () => {
             <div className="mb-8">
               <div className="relative mx-auto mb-6">
                 <div className="w-20 h-20 bg-gradient-good rounded-full flex items-center justify-center mx-auto shadow-soft animate-in zoom-in-50 duration-700 delay-200">
-                  <span className="text-3xl animate-bounce">✨</span>
+                  <span className="text-3xl animate-bounce">🏥</span>
                 </div>
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-good rounded-full opacity-60 animate-ping"></div>
               </div>
@@ -69,7 +69,7 @@ const MagicQRReview = () => {
                 Thank you for your feedback!
               </h2>
               <p className="text-muted-foreground text-lg animate-in fade-in-0 slide-in-from-bottom-3 duration-600 delay-500">
-                Your input helps us improve our service.
+                Your input helps us improve patient care.
               </p>
             </div>
             
@@ -77,7 +77,7 @@ const MagicQRReview = () => {
               onClick={resetForm}
               className="w-full h-14 bg-gradient-good hover:bg-gradient-good/90 text-good-foreground text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-hover rounded-xl animate-in fade-in-0 slide-in-from-bottom-3 duration-600 delay-700"
             >
-              <span className="mr-2">🔄</span>
+              <span className="mr-2">🩺</span>
               Leave Another Review
             </Button>
           </div>
@@ -101,15 +101,15 @@ const MagicQRReview = () => {
           <div className="text-center mb-10">
             <div className="relative mx-auto mb-6">
               <div className="w-24 h-24 bg-gradient-good rounded-full flex items-center justify-center mx-auto shadow-soft animate-in zoom-in-50 duration-700 delay-200">
-                <span className="text-4xl animate-bounce">💭</span>
+                <span className="text-4xl animate-bounce">🏥</span>
               </div>
               <div className="absolute -top-1 -right-1 w-8 h-8 bg-gradient-good rounded-full opacity-40 animate-ping"></div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-in fade-in-0 slide-in-from-bottom-3 duration-600 delay-300">
-              How was your experience?
+              How was your hospital visit?
             </h1>
             <p className="text-muted-foreground text-xl animate-in fade-in-0 slide-in-from-bottom-3 duration-600 delay-500">
-              Your feedback matters to us
+              Help us improve patient care
             </p>
           </div>
 
@@ -120,8 +120,8 @@ const MagicQRReview = () => {
               className="group w-full h-18 bg-gradient-good hover:bg-gradient-good/90 text-good-foreground text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-hover rounded-xl animate-in fade-in-0 slide-in-from-left-4 duration-600 delay-700 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
-              <span className="mr-3 text-2xl group-hover:scale-110 transition-transform duration-200">🟢</span>
-              Good
+              <span className="mr-3 text-2xl group-hover:scale-110 transition-transform duration-200">😊</span>
+              Excellent Care
             </Button>
 
             <Button
@@ -129,8 +129,8 @@ const MagicQRReview = () => {
               className="group w-full h-18 bg-gradient-bad hover:bg-gradient-bad/90 text-bad-foreground text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-hover rounded-xl animate-in fade-in-0 slide-in-from-left-4 duration-600 delay-800 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
-              <span className="mr-3 text-2xl group-hover:scale-110 transition-transform duration-200">🟡</span>
-              Bad
+              <span className="mr-3 text-2xl group-hover:scale-110 transition-transform duration-200">😐</span>
+              Needs Improvement
             </Button>
 
             <Button
@@ -138,15 +138,15 @@ const MagicQRReview = () => {
               className="group w-full h-18 bg-gradient-worst hover:bg-gradient-worst/90 text-worst-foreground text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-soft hover:shadow-hover rounded-xl animate-in fade-in-0 slide-in-from-left-4 duration-600 delay-900 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
-              <span className="mr-3 text-2xl group-hover:scale-110 transition-transform duration-200">🔴</span>
-              Worst
+              <span className="mr-3 text-2xl group-hover:scale-110 transition-transform duration-200">😞</span>
+              Poor Experience
             </Button>
           </div>
 
           {/* Footer */}
           <div className="mt-10 text-center animate-in fade-in-0 slide-in-from-bottom-3 duration-600 delay-1000">
             <p className="text-sm text-muted-foreground/80">
-              Powered by Magic QR Reviews
+              Your feedback helps us provide better healthcare
             </p>
           </div>
         </div>

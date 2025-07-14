@@ -36,18 +36,18 @@ All colors MUST be HSL.
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    /* Review system colors */
-    --good: 142 76% 36%;
+    /* Hospital review system colors */
+    --good: 168 76% 42%;
     --good-foreground: 0 0% 100%;
-    --bad: 45 93% 47%;
+    --bad: 32 95% 44%;
     --bad-foreground: 0 0% 100%;
     --worst: 0 84% 60%;
     --worst-foreground: 0 0% 100%;
 
-    /* Gradients */
-    --gradient-bg: linear-gradient(135deg, hsl(240 10% 98%), hsl(250 15% 95%));
-    --gradient-good: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 42%));
-    --gradient-bad: linear-gradient(135deg, hsl(45 93% 47%), hsl(45 93% 53%));
+    /* Hospital gradients */
+    --gradient-bg: linear-gradient(135deg, hsl(210 25% 97%), hsl(200 30% 94%));
+    --gradient-good: linear-gradient(135deg, hsl(168 76% 42%), hsl(168 76% 48%));
+    --gradient-bad: linear-gradient(135deg, hsl(32 95% 44%), hsl(32 95% 50%));
     --gradient-worst: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 66%));
 
     /* Animations */
